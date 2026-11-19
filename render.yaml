@@ -1,0 +1,7 @@
+services:
+    - type: web
+    name: gallan-keepers
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn gallan_keepers:app
+    plan: free
